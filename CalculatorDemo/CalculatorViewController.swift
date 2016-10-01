@@ -30,25 +30,31 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var sqareRootButton: UIButton! //tag = 4
     @IBOutlet weak var powerButton: UIButton! //tag = 5
     @IBOutlet weak var divisionButton: UIButton! //tag = 6
+    @IBOutlet weak var signButton: UIButton! // tag = 7
     
     @IBOutlet weak var dotButton: UIButton!
     @IBOutlet weak var equalsButton: UIButton!
-    @IBOutlet weak var signButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
     
+    
+    //indirect keyword allows storing by reference
     indirect enum Expression{
         case number(Double)
         case addition(Expression,Expression)
         case multiplication(Expression, Expression)
-        case substraction(Expression,Expression)
+        case subtraction(Expression,Expression)
         case squareRoot(Expression)
         case power(Expression)
         case division(Expression, Expression)
     }
     
     
-    var currentExpr: Expression = Expression.number(0)
+    var currentExpr: Expression = Expression.number(0) //expression to evalueate
+    var binaryOperationIsActive: Bool = false // if we are waiting for the second operand
+    var lastBinaryOperationTag: Int? = nil // saving last binary operation tag to perform the operation when we get second operand
+    var userIsTyping: Bool = false
+    var dotIsActive: Bool = false // should we work with reals?
     
     
     func evaluateExpression(_ expression:Expression) -> Double{
@@ -59,7 +65,7 @@ class CalculatorViewController: UIViewController {
             return evaluateExpression(left) + evaluateExpression(right)
         case let .multiplication(left, right):
             return evaluateExpression(left) * evaluateExpression(right)
-        case let .substraction(left,right):
+        case let .subtraction(left,right):
             return evaluateExpression(left) - evaluateExpression(right)
         case let .squareRoot(value):
             return sqrt(evaluateExpression(value))
@@ -109,10 +115,11 @@ class CalculatorViewController: UIViewController {
         }
         
         
-        if(currentText != "0"){
+        if(userIsTyping && displayLabel.text != "0"){
             displayLabel.text = currentText + buttonText
         }else{
             displayLabel.text = buttonText
+            userIsTyping = true
         }
     }
     
@@ -125,30 +132,64 @@ class CalculatorViewController: UIViewController {
         switch tag {
         case 1:
             currentExpr = Expression.addition(Expression.number(Double(displayLabel.text!)!), currentExpr)
+        case 3:
+            currentExpr = Expression.subtraction(currentExpr, Expression.number(Double(displayLabel.text!)!))
         default:
             print("Do nothing")
         }
     }
     
+    func performUnaryOperation(with tag: Int?){
+        guard let tag = tag else {
+            print("Tag is nil")
+            return
+        }
+        
+        switch tag{
+        case 5:
+            let num = Double(displayLabel.text!)!
+            displayLabel.text = dotIsActive ? String(num*num) : String(Int(num * num))
+        case 7:
+            let num = Double(displayLabel.text!)!
+            displayLabel.text = dotIsActive ? String(-num) : String(Int(-num))
+        default:
+            print("Do nothing")
+        }
+    }
+    
+    
     func setDefaults(){
         binaryOperationIsActive = false
         lastBinaryOperationTag  = nil
+        userIsTyping = false
+        dotIsActive = false
     }
     
-    var binaryOperationIsActive: Bool = false
-    var lastBinaryOperationTag: Int? = nil
+    
+    
+   //Doesn't work yet
+    @IBAction func unaryOperationButtonPressed(_ sender: AnyObject) {
+//        let buttonPressed = sender as! UIButton
+//        performUnaryOperation(with: buttonPressed.tag)
+//        if(userIsTyping){
+//            currentExpr = Expression.number(Double(displayLabel.text!)!)
+//        }
+    }
+    
     
     @IBAction func binaryOperationButtonPressed(_ sender: AnyObject) {
         let buttonPressed = sender as! UIButton
         
         if(binaryOperationIsActive){
             performBinaryOperation(with: lastBinaryOperationTag)
+            userIsTyping = false
         }
-        else
-        {
+        
+        if(userIsTyping){
             currentExpr = Expression.number(Double(displayLabel.text!)!)
+            userIsTyping = false
         }
-        displayLabel.text = "0"
+        
         binaryOperationIsActive = true
         lastBinaryOperationTag = buttonPressed.tag
     }
