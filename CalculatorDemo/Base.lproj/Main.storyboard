@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-tS-Brj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Sy-tS-Brj">
                                 <color key="backgroundColor" red="0.12941176470588237" green="0.3843137254901961" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FSb-np-Zrv"/>
@@ -37,7 +37,7 @@
                                     <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wo2-YB-7mp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-Df-mGu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-Df-mGu">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="5Us-3w-ShR"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="binaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sk-90-0Ol"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6M-ox-Sp1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Y-w9-rgt">
@@ -76,13 +76,13 @@
                                     <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="20z-Cj-djZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-Mu-TAi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-Mu-TAi">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="binaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JcS-jQ-A3d"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2o-8n-P7N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8v-cZ-NIg">
@@ -112,13 +112,13 @@
                                     <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiG-dS-6is"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-TO-qhS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLZ-TO-qhS">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="/" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="binaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Z9-0s-Ooi"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BK2-Wj-Z9k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6a-ck-xcf">
@@ -130,13 +130,13 @@
                                     <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k5m-Mc-wE5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-UC-OjX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYV-UC-OjX">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="*" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="binaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVe-08-hk1"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dB5-hR-Zwf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjY-3I-jBc">
@@ -145,7 +145,7 @@
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="unaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLE-Lt-Qig"/>
+                                    <action selector="numberButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Kh-K2-9kE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-mg-hkY">
@@ -176,37 +176,37 @@
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="equalsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t5t-Gz-ued"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7r-Rk-vIe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-Jl-bsh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oe-Jl-bsh">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="+/-" backgroundImage="operationButton">
+                                <state key="normal" title="±" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="unaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebR-fZ-j55"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWV-qe-7iv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-7Q-rzQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-7Q-rzQ">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="x^2" backgroundImage="operationButton">
+                                <state key="normal" title="x²" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="unaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TCL-Ip-h3i"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u62-AM-lKj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-JY-zlu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2h-JY-zlu">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="sqrt" backgroundImage="operationButton">
+                                <state key="normal" title="√" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="unaryOperationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNc-4k-Zgo"/>
+                                    <action selector="operationButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cd1-JP-vRb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jz-LS-vVv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jz-LS-vVv">
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="C" backgroundImage="operationButton">
                                     <color key="titleColor" red="0.69624581136912755" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -310,27 +310,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="additionButton" destination="0fa-Mu-TAi" id="KZm-cI-9go"/>
-                        <outlet property="button0" destination="p6a-ck-xcf" id="B4m-c8-a1O"/>
-                        <outlet property="button1" destination="vnc-DK-JpG" id="ZLL-8Y-cPf"/>
-                        <outlet property="button2" destination="mMa-mg-hkY" id="7Xg-fd-TKJ"/>
-                        <outlet property="button3" destination="TSx-fs-8Cc" id="pXN-Bd-mAs"/>
-                        <outlet property="button4" destination="N2Y-w9-rgt" id="HtZ-Lp-Y7h"/>
-                        <outlet property="button5" destination="JZn-rS-HSu" id="DAY-3n-0Mi"/>
-                        <outlet property="button6" destination="WIs-dO-eK0" id="1ja-Lr-Xpa"/>
-                        <outlet property="button7" destination="D8v-cZ-NIg" id="xtS-FI-ug8"/>
-                        <outlet property="button8" destination="ysg-hl-e4A" id="VcT-q0-v9N"/>
-                        <outlet property="button9" destination="DaN-fK-V7E" id="cB2-Xy-Wb2"/>
-                        <outlet property="clearButton" destination="6Jz-LS-vVv" id="Iih-KA-2TJ"/>
                         <outlet property="displayLabel" destination="9Sy-tS-Brj" id="JP2-zI-rY0"/>
-                        <outlet property="divisionButton" destination="oLZ-TO-qhS" id="61z-7J-JjX"/>
-                        <outlet property="dotButton" destination="PjY-3I-jBc" id="8Fr-Dx-ojU"/>
-                        <outlet property="equalsButton" destination="OTe-Xj-YkK" id="yzA-p2-CLE"/>
-                        <outlet property="multiplicationButton" destination="XYV-UC-OjX" id="361-Bl-QjM"/>
-                        <outlet property="powerButton" destination="KNJ-7Q-rzQ" id="wad-cH-8eE"/>
-                        <outlet property="signButton" destination="0Oe-Jl-bsh" id="R1G-zO-RYn"/>
-                        <outlet property="sqareRootButton" destination="P2h-JY-zlu" id="0iF-kG-p5R"/>
-                        <outlet property="subtractionButton" destination="IEZ-Df-mGu" id="ftV-VA-0B3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
