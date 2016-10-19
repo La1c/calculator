@@ -12,6 +12,7 @@
 		E70426621D904F17000BEB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70426601D904F17000BEB9C /* Main.storyboard */; };
 		E70426641D904F17000BEB9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70426631D904F17000BEB9C /* Assets.xcassets */; };
 		E70426671D904F17000BEB9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70426651D904F17000BEB9C /* LaunchScreen.storyboard */; };
+		E7D7E7751DB795DC008D6748 /* designableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D7E7741DB795DC008D6748 /* designableButton.swift */; };
 		E7E65B181DAF75B200C30BD2 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E65B171DAF75B200C30BD2 /* CalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		E70426631D904F17000BEB9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E70426661D904F17000BEB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E70426681D904F17000BEB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7D7E7741DB795DC008D6748 /* designableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = designableButton.swift; sourceTree = "<group>"; };
 		E7E65B171DAF75B200C30BD2 /* CalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +58,7 @@
 		E704265B1D904F17000BEB9C /* CalculatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E7D7E7741DB795DC008D6748 /* designableButton.swift */,
 				E7E65B171DAF75B200C30BD2 /* CalculatorModel.swift */,
 				E704265E1D904F17000BEB9C /* CalculatorViewController.swift */,
 				E70426601D904F17000BEB9C /* Main.storyboard */,
@@ -151,6 +154,7 @@
 				E7E65B181DAF75B200C30BD2 /* CalculatorModel.swift in Sources */,
 				E704265F1D904F17000BEB9C /* CalculatorViewController.swift in Sources */,
 				E704265D1D904F17000BEB9C /* AppDelegate.swift in Sources */,
+				E7D7E7751DB795DC008D6748 /* designableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
