@@ -6,6 +6,10 @@ In current version:
 1. All available operations work (but there are some bugs)
 2. MVC under the hood (with stack!)
 
+TO-DO:
+
+1. Figure out how varying traits work
+2. Add more buttons in landscape
 
 Screenshots:
 
